@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>Formato 1</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styleFormat1Light.css">
+  <script src="js/mainformato1.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <h1>Formato 1</h1>
+  </nav>
+  <div id="main-container" class="container ">
+
+    <h1 class="page-header text-center ">Nota de Venta</h1>
+    <div class="row col-12 my-row jutify-content-between">
+      <div class="col-md-6 col-xs-12">
+        <form class="col-md-12 col-sm-12 main-form" action="index.html" method="post" name="info-personal">
+          <h4>Datos de Pedido</h4>
+          <div class="form-group col-sm-6">
+            <label for="tipoPedido">Tipo de Pedido</label>
+            <select class="form-control custom-text select-custom" id="tipoPedido">
+              <option value="personal">Personal</option>
+              <option value="comercial">Comercial</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-12" id="empresa" style="display:none">
+              <label for="empresa">Empresa</label>
+              <input type="text" class="form-control custom-text" name="empresa" value="">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="Nombre">Nombre(s)</label>
+              <input type="text" class="form-control custom-text" name="Nombre" value="">
+            </div>
+            <div class="form-group  col-md-6 col-sm-12">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" class="form-control custom-text" name="apellidos" value="">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="telefono">Teléfono</label>
+              <input type="text" class="form-control custom-text" name="telefono" value="">
+            </div>
+            <div class="form-group  col-md-6 col-sm-12">
+              <label for="celular">Celular</label>
+              <input type="text" class="form-control custom-text" name="celular" value="">
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="Domicilio">Domicilio</label>
+            <input type="text" class="form-control custom-text" name="Domicilio" value="">
+          </div>
+          <div class="form-group ">
+            <label for="email">e-mail</label>
+            <input type="text" class="form-control custom-text" name="email" value="">
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6 col-xs-12">
+
+
+        <form class="col-12 col-sm-12 main-form" action="index.html" method="post" name="info-personal">
+          <h4>Datos de Pedido</h4>
+
+
+          <div class="form-group">
+            <label for="total">Total</label>
+            <input type="text" class="form-control custom-text" name="total" value="">
+          </div>
+          <div class="form-group">
+            <label for="anticipo">Anticipo</label>
+            <input type="text" class="form-control custom-text" name="anticipo" value="">
+          </div>
+          <div class="form-group ">
+            <label for="balance"> Balance</label>
+            <input type="text" class="form-control custom-text" name="balance" value="">
+          </div>
+          <div class="form-group ">
+            <label for="empleado">Firma Empleado</label>
+            <input type="text" class="form-control custom-text" name="tomado" value="">
+          </div>
+          <div class="form-group ">
+            <label for="cliente">Firma Cliente</label>
+            <input type="text" class="form-control custom-text" name="cliete" value="">
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <form class="main-form" action="index.html" method="post">
+      <div class="row col-12">
+        <div class="form-group col-sm-6">
+          <label for="tipoEnvio">Envío</label>
+          <select class="form-control custom-text select-custom" id="tipoEnvio">
+            <option value="Recoger">Recoger</option>
+            <option value="Envio">A Domicilio</option>
+            <option value="triangulito">Triangulito</option>
+          </select>
+        </div>
+        <div class="form-group  col-md-12 col-sm-12" id="DomicilioEnvio" style="display:none;">
+          <label for="DomicilioEnvio">Domicilio</label>
+          <input type="text" class="form-control custom-text" id="" name="DomicilioEnvio" value="" style="display:flex;">
+        </div>
+
+      </div>
+    </form>
+    <div class="" id="pedidos">
+
+      <form class="main-form" id="nuevoProducto" action="index.html" method="post">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-lg-3 form-group">
+            <label for="producto">Producto</label>
+            <select name "producto" class="form-control custom-text select-custom">
+              <option value="backlit">Backlit</option>
+              <option value="canvas">Canvas</option>
+              <option value="cepilladoOro">Cepillado de Oro</option>
+              <option value="cepilladoPlata">Cepillado Plata</option>
+              <option value="espejo">Espejo</option>
+              <option value="estaticoTransparente">Estatico Transparente</option>
+              <option value="lona13">Lona 13 oz</option>
+              <option value="lienzoTexturizado">Lienzo Texturizado</option>
+              <option value="lonaMesh">Lona Mesh</option>
+              <option value="lonaTraslucida">Lona Traslucida</option>
+              <option value="materialCliente">Material del cliente</option>
+              <option value="otro">Otro</option>
+              <option value="papelFoster">Papel Foster</option>
+              <option value="papelFotografico">Papel Fotografico</option>
+              <option value="papelPolybanner">Papel Polybanner</option>
+              <option value="textilB">Textil "B"</option>
+              <option value="tornasol">Tornasol</option>
+              <option value="vinilBrillante">Vinil Brillante</option>
+              <option value="vinilMate">Vinil Mate</option>
+              <option value="vinilMicroperforado">Vinil MicroPerforado</option>
+              <option value="vinilTransparente">Vinil Transparente</option>
+              <option value="vinilReflejante">Vinil Reflejante</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 form-group">
+            <label for="montado">Montado</label>
+            <select name="montado" class="form-control custom-text select-custom" name="">
+              <option value="acrylico18">Acrylico 1/8</option>
+              <option value="acrylico316">Acrylico 3/16</option>
+              <option value="aluminio">Aluminio</option>
+              <option value="aluminioCepillado">Aluminio cepillado</option>
+              <option value="bastidorTubular">Bastidor Tubular</option>
+              <option value="caballete60x80">Caballete .60cm x .80cm</option>
+              <option value="caballete80x100">Caballete .80cm x 1.00cm</option>
+              <option value="coroplast316">Coroplast 3/16</option>
+              <option value="coroplast12">Coroplast 1/2</option>
+              <option value="display60x160">Display .60cm X 1.60cm</option>
+              <option value="display75x780">Display .75cm X 1.80cm</option>
+              <option value="foamboard316">Foamboard 3/16</option>
+              <option value="foamboard12">Foamboard 1/2</option>
+              <option value="imanCal15">Iman cal. 15</option>
+              <option value="imanCal20">Iman cal. 20</option>
+              <option value="imanCal30">Iman cal. 30</option>
+              <option value="lona18">Lona 18 oz</option>
+              <option value="maderaCal20">Madera cal. 20</option>
+              <option value="materialCliente">Material del Cliente</option>
+              <option value="pvcCal15">PVC cal. 15</option>
+              <option value="pvcCal20">PVC cal. 20</option>
+              <option value="pvcCal30">PVC cal. 30</option>
+              <option value="stirenoCal15">Stireno cal. 15</option>
+              <option value="toldo">Toldo</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 form-group">
+            <label for="tipoImpresion">Tipo de Impresion</label>
+            <select class="form-control custom-text select-custom" id="tipoImpresion">
+              <option value="frente">Frente</option>
+              <option value="ambos">Ambos Lados</option>
+            </select>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 form-group">
+            <label for="acabado">Acabado</label>
+            <select class="form-control custom-text select-custom" id="tipoAcabado" name="">
+              <option value="agujero">Agujero</option>
+              <option value="bastillaAlrededor">Bastilla alrededor</option>
+              <option value="colgado">Colgado</option>
+              <option value="corteOrilla">Corte a la Orilla</option>
+              <option value="corteViente">corte para viento</option>
+              <option value="esquinaRondeada">Esquina Rondeada</option>
+              <option value="instalado">Instalado</option>
+              <option value="mangoParaTubo">Mango para tubo</option>
+              <option value="ojillos">Ojillos</option>
+              <option value="Otro">Otro</option>
+              <option value="sinAcabado">Sin Acabado</option>
+              <option value="suajeContorno">Suaje/Contorno</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <textarea name="pedidoTexto" rows="2" cols="40" class="form-control"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+  <!-- <div class="fab d-flex align-items-center justify-content-center"> -->
+  <div class="fab d-flex align-items-center justify-content-center">
+    <i id="botonNuevoProducto" class="fas fa-plus custom-icon btn-fab"></i>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

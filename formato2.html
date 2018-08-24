@@ -1,0 +1,331 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleFormat1Light.css">
+    <script src="js/formato2.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Formato 2</h1>
+      <a href=""><i class="fas fa-chevron-right nav-item"></i></a>
+    </nav>
+    <div class="container ">
+
+      <h1 class="page-header text-center ">Nota de Venta</h1>
+      <div class="row col-12 my-row jutify-content-between">
+        <div class="col-md-6 col-xs-12">
+          <form class="col-md-12 col-sm-12 main-form" action="index.html" method="post" name="info-personal">
+            <h4>Datos de Pedido</h4>
+            <div class="form-group col-sm-6">
+              <label for="tipoPedido">Tipo de Pedido</label>
+              <select class="form-control custom-text select-custom" style="padding:0;" id="tipoPedido">
+                <option value="personal">Personal</option>
+                <option value="comercial">Comercial</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-sm-12" id="empresa" style="display:none">
+                <label for="empresa">Empresa</label>
+                <input type="text" class="form-control custom-text" name="empresa" value="">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="Nombre">Nombre(s)</label>
+                <input type="text" class="form-control custom-text" name="Nombre" value="">
+              </div>
+              <div class="form-group  col-md-6 col-sm-12">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control custom-text" name="apellidos" value="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6 col-sm-12">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-control custom-text" name="telefono" value="">
+              </div>
+              <div class="form-group  col-md-6 col-sm-12">
+                <label for="celular">Celular</label>
+                <input type="text" class="form-control custom-text" name="celular" value="">
+              </div>
+            </div>
+            <div class="form-group ">
+              <label for="Domicilio">Domicilio</label>
+              <input type="text" class="form-control custom-text" name="Domicilio" value="">
+            </div>
+            <div class="form-group ">
+              <label for="email">e-mail</label>
+              <input type="text" class="form-control custom-text" name="email" value="">
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 col-xs-12">
+
+
+          <form class="col-12 col-sm-12 main-form" action="index.html" method="post" name="info-personal">
+            <h4>Datos de Pedido</h4>
+
+
+            <div class="form-group">
+              <label for="total">Total</label>
+              <input type="text" class="form-control custom-text" name="total" value="">
+            </div>
+            <div class="form-group">
+              <label for="anticipo">Anticipo</label>
+              <input type="text" class="form-control custom-text" name="anticipo" value="">
+            </div>
+            <div class="form-group ">
+              <label for="balance"> Balance</label>
+              <input type="text" class="form-control custom-text" name="balance" value="">
+            </div>
+            <div class="form-group ">
+              <label for="empleado">Firma Empleado</label>
+              <input type="text" class="form-control custom-text" name="tomado" value="">
+            </div>
+            <div class="form-group ">
+              <label for="cliente">Firma Cliente</label>
+              <input type="text" class="form-control custom-text" name="cliete" value="">
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <form class="main-form" action="index.html" method="post">
+
+        <div class="form-group ">
+          <h4>Pedido</h4>
+          <textarea name="pedido" class="form-control" rows="8" cols="80"></textarea>
+        </div>
+
+      </form>
+      <form class="main-form" action="index.html" method="post">
+        <h4 class="header">Impresion </h4>
+        <div class="row col-12">
+          <div class="form-group col-sm-6 col-xs-12">
+            <label for="ubicacion">Ubicación</label>
+            <select class="form-control custom-text select-custom" id="ubicacion">
+              <option value="frente">Frente</option>
+              <option value="ambos">Ambos Lados</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-6 col-xs-12">
+            <label for="tipoEnvio">Envío</label>
+            <select class="form-control custom-text select-custom" id="tipoEnvio">
+              <option value="Recoger">Recoger</option>
+              <option value="Envio">A Domicilio</option>
+              <option value="triangulito">Triangulito</option>
+            </select>
+          </div>
+          <div class="form-group  col-md-12 col-sm-12" id="DomicilioEnvio" style="display:none;">
+            <label for="DomicilioEnvio">Domicilio</label>
+            <input type="text" class="form-control custom-text" id="" name="DomicilioEnvio" value="" style="display:flex;">
+          </div>
+
+        </div>
+        <div class="row col-12">
+          <div class="form-group col-sm-6">
+            <label for="tipoImpresion">Tipo de Impresion</label>
+            <select class="form-control custom-text select-custom" id="tipoImpresion">
+              <option value="estampado">Estampado</option>
+              <option value="sublimacion">Sublimacion</option>
+              <option value="bordado">Bordado</option>
+              <option value="serigrafia">Serigrafía</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <form class="main-form" action="index.html" method="post">
+        <h4>Tipo de Playera </h4>
+        <div class="row">
+          <div class="col-6">
+            <select class="form-control custom-text select-custom" id="tipoPlayera">
+              <option value="cuelloRedondo">Cuello Redondo</option>
+              <option value="cuelloV">Cuello V</option>
+              <option value="camisasBotones">Camisas Botones</option>
+              <option value="deportiva">Deportiva</option>
+              <option value="gorra">Gorra</option>
+              <option value="sudadera">Sudadera</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <select class="form-control custom-text select-custom" style="display:none" id="playeraMangas">
+              <option value="mangaCorta">Manga Corta</option>
+              <option value="mangaLarga">Manga Larga</option>
+            </select>
+            <select class="form-control custom-text select-custom" style="display:none" id="sudaderaGorros">
+              <option value="conGorro">Con Gorro</option>
+              <option value="sinGorro">Sin Gorro</option>
+            </select>
+            <select class="form-control custom-text select-custom" style="display:none" id="sudaderaCierres">
+              <option value="conCierre">Con Cierre</option>
+              <option value="sinCierre">Sin Cierre</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <form class="main-form" action="index.html" method="post">
+        <h4 class="header">Tallas </h4>
+        <div class="row">
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+            <div class="form-check ">
+              <input type="checkbox" class="form-check-input" id="caballeroCheckbox" value="caballero">
+              <label for="caballero">Caballero</label>
+            </div>
+            <div class="" id="tallasCaballero" style="display:none">
+              <div class="row counter">
+                <input class="col-sm-2 col-3  custom-text" type="text" name="caballeroExtraC" value="">
+                <label class="col-sm-8 col-6" for="caballeroExtraC" >Extra Chica</label>
+              </div>
+              <div class="row counter">
+                <input class="col-sm-2 col-3 custom-text " type="text" name="caballeroChica" value="">
+                <label class="col-sm-8 col-7" for="caballeroChica" >Chica</label>
+              </div>
+              <div class="row counter">
+                <input class="col-sm-2 col-3 custom-text" type="text" name="caballeroMediana" value="">
+                <label class="col-sm-8 col-7" for="caballeroMediana" >Mediana</label>
+              </div>
+              <div class="row counter">
+                <input class="col-sm-2 col-3 custom-text" type="text" name="caballerGrande" value="">
+                <label class="col-sm-8 col-7" for="caballeroGrande" >Grande</label>
+              </div>
+              <div class="row counter">
+                <input class="col-sm-2 col-3 custom-text" type="text" name="caballeroExtraG" value="">
+                <label class="col-sm-8 col-7" for="caballeroExtraG" >Extra Grande</label>
+              </div>
+            </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+              <div class="form-check ">
+                <input type="checkbox" class="form-check-input" id="damaCheckbox" value="dama">
+                <label for="dama">Dama</label>
+              </div>
+              <div id="tallasDama" style="display:none">
+                <div class="row counter">
+                  <input class="col-sm-2 col-3 custom-text" type="text" name="damaExtraC" value="">
+                  <label class="col-sm-8 col-7" for="damaExtraC" >Extra Chica</label>
+                </div>
+                <div class="row counter">
+                  <input class="col-sm-2 col-3 custom-text " type="text" name="damaChica" value="">
+                  <label class="col-sm-8 col-8" for="damaChica" >Chica</label>
+                </div>
+                <div class="row counter">
+                  <input class="col-sm-2 col-3 custom-text" type="text" name="damaMediana" value="">
+                  <label class="col-sm-8 col-8" for="damaMediana" >Mediana</label>
+                </div>
+                <div class="row counter">
+                  <input class="col-sm-2 col-3 custom-text" type="text" name="damaGrande" value="">
+                  <label class="col-sm-8 col-7" for="damaGrande" >Grande</label>
+                </div>
+                <div class="row counter">
+                  <input class="col-sm-2 col-3 custom-text" type="text" name="damaExtraG" value="">
+                  <label class="col-sm-8 col-7" for="damaExtraG" >Extra Grande</label>
+                </div>
+              </div>
+              </div>
+              <div class=" col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-check ">
+                  <input type="checkbox" class="form-check-input" id="juvenilCheckbox" value="juvenil">
+                  <label for="Juvenil">Juvenil</label>
+                </div>
+                <div id="tallasJuvenil" style="display:none">
+                  <div class="row counter">
+                    <input class="col-sm-2 col-3 custom-text" type="text" name="juvenilExtraC" value="">
+                    <label class="col-sm-8 col-7" for="juvenilExtraC" >Extra Chica</label>
+                  </div>
+                  <div class="row counter">
+                    <input class="col-sm-2 col-3 custom-text " type="text" name="juvenilChica" value="">
+                    <label class="col-sm-8 col-7" for="juvenilChica" >Chica</label>
+                  </div>
+                  <div class="row counter">
+                    <input class="col-sm-2 col-3 custom-text" type="text" name="juvenilMediana" value="">
+                    <label class="col-sm-8 col-7" for="juvenilMediana" >Mediana</label>
+                  </div>
+                  <div class="row counter">
+                    <input class="col-sm-2 col-3 custom-text" type="text" name="juvenilGrande" value="">
+                    <label class="col-sm-8 col-7" for="juvenilGrande" >Grande</label>
+                  </div>
+                  <div class="row counter">
+                    <input class="col-sm-2 col-3 custom-text" type="text" name="juvenilExtraG" value="">
+                    <label class="col-sm-8 col-7" for="juvenilExtraG" >Extra Grande</label>
+                  </div>
+                </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                  <div class="form-check ">
+                    <input type="checkbox" class="form-check-input" id="niñoCheckbox" value="niños">
+                    <label for="niños">Niños</label>
+                  </div>
+                  <div id="tallasNiño" style="display:none">
+                    <div class="row counter">
+                      <input class="col-sm-2 col-3 custom-text" type="text" name="niñoExtraC" value="">
+                      <label class="col-sm-8 col-7" for="niñoExtraC" >Extra Chica</label>
+                    </div>
+                    <div class="row counter">
+                      <input class="col-sm-2 col-3 custom-text " type="text" name="niñoChica" value="">
+                      <label class="col-sm-8 col-7" for="niñoChica" >Chica</label>
+                    </div>
+                    <div class="row counter">
+                      <input class="col-sm-2 col-3 custom-text" type="text" name="niñoMediana" value="">
+                      <label class="col-sm-8 col-7" for="niñoMediana" >Mediana</label>
+                    </div>
+                    <div class="row counter">
+                      <input class="col-sm-2 col-3 custom-text" type="text" name="niñoGrande" value="">
+                      <label class="col-sm-8 col-7" for="niñoGrande" >Grande</label>
+                    </div>
+                    <div class="row counter">
+                      <input class="col-sm-2 col-3 custom-text" type="text" name="niñoExtraG" value="">
+                      <label class="col-sm-8 col-7" for="niñoExtraG" >Extra Grande</label>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-check ">
+                      <input type="checkbox" class="form-check-input" id="infantilCheckbox" value="infantil">
+                      <label for="infantil">Infantil</label>
+                    </div>
+                    <div id="tallasInfantil" style="display:none">
+                      <div class="row counter">
+                        <input class="col-sm-2 col-3 custom-text" type="text" name="infantilExtraC" value="">
+                        <label class="col-sm-8 col-7" for="infantilExtraC" >Extra Chica</label>
+                      </div>
+                      <div class="row counter">
+                        <input class="col-sm-2 col-3 custom-text " type="text" name="infantilChica" value="">
+                        <label class="col-sm-8 col-7" for="infantilChica" >Chica</label>
+                      </div>
+                      <div class="row counter">
+                        <input class="col-sm-2 col-3 custom-text" type="text" name="infantilMediana" value="">
+                        <label class="col-sm-8 col-7" for="infantilMediana" >Mediana</label>
+                      </div>
+                      <div class="row counter">
+                        <input class="col-sm-2 col-3 custom-text" type="text" name="infantilGrande" value="">
+                        <label class="col-sm-8 col-7" for="infantilGrande" >Grande</label>
+                      </div>
+                      <div class="row counter">
+                        <input class="col-sm-2 col-3 custom-text" type="text" name="infantilExtraG" value="">
+                        <label class="col-sm-8 col-7" for="infantilExtraG" >Extra Grande</label>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+          </div>
+      </form>
+    </div>
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
